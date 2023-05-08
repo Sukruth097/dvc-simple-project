@@ -1,8 +1,10 @@
 # add stages here 
-# stages:
-#   stage_name:
-#     cmd: python src/stage_01______.py
-#     deps:
-#     - src/stage_01______.py
-#     outs:
-#     - output_data_of_file_path
+stages:
+  load_data:
+    cmd: python src/stage_01_load_save_data.py -c=configs/config.yaml
+    deps:
+    - src/stage_01_load_save_data.py
+    - src/utils/common.py
+    - configs/config.yaml
+    outs:
+    - artifacts/raw_local_dir/data.csv

@@ -4,10 +4,10 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 ## edit below variables as per your requirements -
-REPO_NAME = "REPO_NAME"
-AUTHOR_USER_NAME = "c17hawke"
+REPO_NAME = "dvc-simple-project"
+AUTHOR_USER_NAME = "sukruth"
 SRC_REPO = "src"
-LIST_OF_REQUIREMENTS = []
+LIST_OF_REQUIREMENTS = ['dvc','pandas','scikit-learn']
 
 
 setup(
