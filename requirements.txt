@@ -3,6 +3,7 @@ tqdm
 dvc
 pandas
 numpy
+scikit-learn
 PyYAML
 
 ### local packages -
