@@ -5,3 +5,8 @@ artifacts:
   ARTIFACTS_DIR: artifacts
   RAW_LOCAL_DIR: raw_local_dir
   RAW_LOCAL_FILE: data.csv
+  SPLIT_DIR: split_dir
+  TRAIN_FILE: train.csv
+  TEST_FILE: test.csv
+  TRAIN_MODEL_DIR: train_model_dir
+  TRAIN_MODEL_FILENAME: ElasticNet.model

@@ -8,3 +8,19 @@ stages:
     - configs/config.yaml
     outs:
     - artifacts/raw_local_dir/data.csv
+
+  split_data:
+    cmd: python src/stage_02_load_and_split.py 
+    deps:
+    - src/stage_02_load_and_split.py
+    - artifacts/raw_local_dir/data.csv
+    - src/utils/common.py
+    - configs/config.yaml
+    - params.yaml
+    params:
+    - base.random_state
+    - base.test_size
+    outs:
+    - artifacts/split_dir/train.csv
+    - artifacts/split_dir/test.csv
+    

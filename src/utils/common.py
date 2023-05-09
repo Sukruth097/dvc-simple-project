@@ -22,3 +22,8 @@ def save_json(path: str, data: dict) -> None:
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+def save_file(dataframe,path,index=False):
+    dataframe.to_csv(path)
+    logging.info(f"The dataframe has been saved to {path}")
+    
