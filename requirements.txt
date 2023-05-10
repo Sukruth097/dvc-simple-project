@@ -5,6 +5,7 @@ pandas
 numpy
 scikit-learn
 PyYAML
+fsspec==2022.1.0
 
 ### local packages -
 -e . # << uncomment this to install from setup.py
