@@ -20,7 +20,7 @@ jobs:
           # Your ML wokflow commands
           pip install --upgrade pip
           pip install -r requirements.txt
-          dvc repro -v
+          dvc repro --force
           echo "# REPORTS" >> report.md
           echo "## metrics" >> report.md
           cat scores.json >> report.md
