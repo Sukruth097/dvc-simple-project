@@ -26,7 +26,7 @@ stages:
       md5: a899116affa3e57437b26fc7525cc6b5
       size: 446
     - path: params.yaml
-      md5: 43773cab38ea0e04c4246a031289463a
+      md5: a4eb8c7e7e5c79badd2818a486ed4979
       size: 136
     - path: src/stage_02_load_and_split.py
       md5: 0ba257429c2627ae3c7e0bcd2f672251
@@ -83,7 +83,7 @@ stages:
       md5: a899116affa3e57437b26fc7525cc6b5
       size: 446
     - path: params.yaml
-      md5: 43773cab38ea0e04c4246a031289463a
+      md5: a4eb8c7e7e5c79badd2818a486ed4979
       size: 136
     - path: src/stage_02_load_and_split.py
       md5: 0ba257429c2627ae3c7e0bcd2f672251
@@ -94,12 +94,12 @@ stages:
     params:
       params.yaml:
         base.random_state: 43
-        model_params.ElasticNet_params.alpha: 0.7
+        model_params.ElasticNet_params.alpha: 0.3
         model_params.ElasticNet_params.l1_ratio: 0.7
         model_params.target_column: quality
     outs:
     - path: artifacts/train_model_dir/ElasticNet.model
-      md5: ab1898441c991ea7834652d268f8cb30
+      md5: 05c39d6dffecb84bf2305c6dfa0f6bc7
       size: 1393
   model_evaluation:
     cmd: python src/stage_04_evaluate.py
@@ -108,7 +108,7 @@ stages:
       md5: ef84accb5cb216709edb0abbae0ed438
       size: 30332
     - path: artifacts/train_model_dir/ElasticNet.model
-      md5: ab1898441c991ea7834652d268f8cb30
+      md5: 05c39d6dffecb84bf2305c6dfa0f6bc7
       size: 1393
     - path: configs/config.yaml
       md5: a899116affa3e57437b26fc7525cc6b5
@@ -121,5 +121,5 @@ stages:
       size: 816
     outs:
     - path: scores.json
-      md5: 13f945415ffa7ec596e23347cdd45bf2
+      md5: bd722e12191dda81c7be3d8c5ec8b291
       size: 100
