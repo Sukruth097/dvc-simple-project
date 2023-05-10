@@ -10,7 +10,7 @@ from src.utils.common import read_yaml, create_directories
 STAGE = "DATA_INGESTION" 
 
 logging.basicConfig(
-    filename=os.path.join("logs", 'running_logs.log'), 
+    filename=os.path.join(os.getcwd(),"logs", 'running_logs.log'), 
     level=logging.INFO, 
     format="[%(asctime)s: %(levelname)s: %(module)s]: %(message)s",filemode="a")
 
