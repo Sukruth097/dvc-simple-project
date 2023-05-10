@@ -48,7 +48,7 @@ stages:
     - artifacts/train_model_dir/ElasticNet.model
     - src/utils/common.py
     - configs/config.yaml
-    - params.yaml
-    outs:
-    - artifacts/reports_dir/scores.json   
+    metrics:
+      - scores.json:
+          cache: false
     

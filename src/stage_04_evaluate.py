@@ -10,7 +10,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 
 
-STAGE = "MODEL_EVALUATION" 
+STAGE = "MODEL_EVALUATION_" 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -66,15 +66,15 @@ def evaluate_model(config_path,param_path):
     scores_dir = config['artifacts']['REPORTS_DIR']
     create_directories([os.path.join(artifact_dir,scores_dir)])
 
-    report_filenam = config['artifacts']['SCORES_FILENAME']
-    report_path = os.path.join(artifact_dir,scores_dir,report_filenam)
+    report_filename= config['scores']
+    # report_path = os.path.join(report_filenam)
 
     scores ={
         "rmse": rmse,
         "mae": mae,
         "r2": r2
     }
-    save_json(path=report_path,data=scores)
+    save_json(path=report_filename,data=scores)
 
     
 if __name__ == '__main__':

@@ -11,4 +11,5 @@ artifacts:
   TRAIN_MODEL_DIR: train_model_dir
   TRAIN_MODEL_FILENAME: ElasticNet.model
   REPORTS_DIR: reports_dir
-  SCORES_FILENAME: scores.json 
+
+scores: scores.json 
