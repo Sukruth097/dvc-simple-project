@@ -23,4 +23,32 @@ stages:
     outs:
     - artifacts/split_dir/train.csv
     - artifacts/split_dir/test.csv
+
+  model_training:
+    cmd: python src/stage_03_train.py 
+    deps:
+    - src/stage_02_load_and_split.py
+    - artifacts/split_dir/train.csv
+    - src/utils/common.py
+    - configs/config.yaml
+    - params.yaml
+    params:
+    - base.random_state
+    - model_params.target_column
+    - model_params.ElasticNet_params.alpha
+    - model_params.ElasticNet_params.l1_ratio
+    outs:
+    - artifacts/train_model_dir/ElasticNet.model
+
+  model_evaluation:
+    cmd: python src/stage_04_evaluate.py 
+    deps:
+    - src/stage_03_train.py
+    - artifacts/split_dir/test.csv
+    - artifacts/train_model_dir/ElasticNet.model
+    - src/utils/common.py
+    - configs/config.yaml
+    - params.yaml
+    outs:
+    - artifacts/reports_dir/scores.json   
     

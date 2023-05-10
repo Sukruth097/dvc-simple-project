@@ -9,7 +9,7 @@ from sklearn.linear_model import ElasticNet
 import joblib
 
 
-STAGE = "DATA_TRAINING" 
+STAGE = "MODEL_TRAINING" 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
