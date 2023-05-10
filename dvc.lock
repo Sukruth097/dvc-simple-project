@@ -113,6 +113,9 @@ stages:
     - path: configs/config.yaml
       md5: a899116affa3e57437b26fc7525cc6b5
       size: 446
+    - path: params.yaml
+      md5: a4eb8c7e7e5c79badd2818a486ed4979
+      size: 136
     - path: src/stage_03_train.py
       md5: 06f82edf8dd2aaa1d0cc41789fcf0ebd
       size: 2912
