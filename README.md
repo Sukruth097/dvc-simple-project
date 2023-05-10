@@ -2,6 +2,7 @@ dvc-simple-project-template-main
 
 
 # Project Components Architecture
+```
                   +-----------+           
                   | load_data |           
                   +-----------+           
@@ -23,3 +24,4 @@ dvc-simple-project-template-main
               +------------------+        
               | model_evaluation |        
               +------------------+        
+```
